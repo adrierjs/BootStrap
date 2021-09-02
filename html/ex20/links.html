@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /* SELETERES PERSONALIZADOS
+        # = id
+        . = class
+        :pseudo-class
+        :: = pseudo-element
+        > = cildren
+        */
+
+
+
+
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            color: red;
+            text-decoration: none; /*Tirar o sublinhado dos links*/
+            font-weight: bold; /*Links em negrito*/
+        }
+        a:visited{ /*Se o site já foi visitado, ele mostrará azul, caso contrário, ficará vermelho*/
+            color: blue;
+        }
+        a:hover{ /*Para quando for passar o mouse encima*/
+            color: black;
+            text-decoration: underline;
+        }
+        a:active{ /*Comando para quando clicar*/
+            color: yellow;
+
+        
+        }
+        a::before{/*Pseudo-elemento antes*/
+            content: '⇒';
+        }
+        a::after{/*Depois*/
+            content: '⇐';
+            text-decoration: none;
+            font-weight: normal;
+            color: royalblue;
+        }
+        .especial{
+            background-color: rgba(123, 255, 0, 0.63);
+        }
+        .especial::before{
+            content: '✌';
+        }
+        .especial::after{
+            content: '✌';
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://github.com/adrierjs" class="especial" >Repositório GitHub</a></li>
+        <li><a href="https://www.youtube.com/channel/UCrWvhVmt0Qac3HgsjQK62FQ">Canal do Youtube</a></li>
+        <li><a href="https://www.cursoemvideo.com/" >Site do CursoemVídeo</a></li>
+    </ul>
+    
+</body>
+</html>

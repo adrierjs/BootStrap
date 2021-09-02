@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de caixa box-level</title>
+    <style>
+        h1{/*Coloquei a caixa no h1, 300x300*/
+            background-color: #1820867a;
+            height: 300px;
+            width: 300px;
+            /* VERSÃO COMPLETA
+            border-width: 10px;
+            border-style: solid;
+            border-color: #538bd8;*/
+            
+
+            border:10px solid darkgreen; /*Simplificada */
+
+
+            /*padding-top: 10px; topo
+            padding-right: 10px; direita
+            padding-bottom: 10px; baixo
+            padding-left: 10px; esquerda */ 
+
+            padding: 10px 10px 10px 10px; /*Se as 4 linhas forem iguais, só precisa colocar só uma*/
+
+            /*margin-top: 20px; topo
+            margin-right: 20px; direita
+            margin-bottom: 40px; baixo
+            margin-left: 20px; esquerda */
+
+            margin: 20px auto 40px auto; /*Fiz o que estava acima e centralizei a caixa através da esquerda e direita(auto)*/
+
+           /* outline-width: 5px;
+            outline-style: dashed;
+            outline-color: salmon;*/
+
+            outline: 5px dashed salmon;
+
+        }
+        a{
+            /*border-width: 1px;
+            border-style: dashed;
+            border-color: darkred;*/
+
+            border: 1px dashed darkred;
+
+
+            /*padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;*/
+
+            padding: 10px; /*Coloquei só um pois todos são iguais*/
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#"> links são exemplos de caixas inline-leve.</a> Vamos ver como tudo isso funciona</p>
+    
+</body>
+</html>
