@@ -10,3 +10,4 @@ const resultado = 5+1
 console.log(resultado);
 
 
+[]
