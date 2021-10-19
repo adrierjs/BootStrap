@@ -15,3 +15,4 @@ var server = http.createServer(function(req, res){
 }); //criar servidor 
 server.listen(3000); //escutar em uma porta
 //Ctrl + Alt + N para executar na porta 3000
+//npm init : comando para iniciar o npm, no caso o packege.json
