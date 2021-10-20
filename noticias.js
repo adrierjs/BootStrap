@@ -20,3 +20,5 @@ server.listen(3000); //escutar em uma porta
 //npm install express -save : instalar o express para quando for para outro computador e baixar todos os arquivos necessários
 
 //o node é uma plataforma que executa códigos javascript e o express é um framework 
+
+//comando para instalar o EJS: npm install ejs --save
