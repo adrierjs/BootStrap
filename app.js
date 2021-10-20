@@ -21,3 +21,4 @@ app.listen(3000, function(){
 });
 
 //para iniciar, apertar control+alt+n
+//npm install -g nodemon // utilitário para salvar automaticamente as alterações sem precisar resetar o servidor 

@@ -22,3 +22,5 @@ server.listen(3000); //escutar em uma porta
 //o node é uma plataforma que executa códigos javascript e o express é um framework 
 
 //comando para instalar o EJS: npm install ejs --save
+
+//npm install -g nodemon // utilitário para salvar automaticamente as alterações sem precisar resetar o servidor 
