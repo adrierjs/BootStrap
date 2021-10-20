@@ -1,4 +1,6 @@
 var express = require('express'); //recuperando a biblioteca do express
+var msg = require('./mod_test');
+
 var app = express();
 
 app.set('view engine','ejs');
@@ -17,7 +19,7 @@ app.get('/noticias/noticias', function(req,res){
 
 
 app.listen(3000, function(){
-    console.log("Servidor rodando com Express");
+    console.log(msg());
 });
 
 //painstalra iniciar, apertar control+alt+n
