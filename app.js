@@ -20,5 +20,5 @@ app.listen(3000, function(){
     console.log("Servidor rodando com Express");
 });
 
-//para iniciar, apertar control+alt+n
+//painstalra iniciar, apertar control+alt+n
 //npm install -g nodemon // utilitário para salvar automaticamente as alterações sem precisar resetar o servidor 
