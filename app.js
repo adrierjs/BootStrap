@@ -1,9 +1,4 @@
-var express = require('express'); //recuperando a biblioteca do express
-var msg = require('./mod_test');
-
-var app = express();
-
-app.set('view engine','ejs');
+var app = require('./nodejs/config/server');
 
 app.get('/',function(req,res){
     res.render("home/index");
@@ -13,13 +8,13 @@ app.get('/formulario_inclusao_noticia', function(req,res){
     res.render("admin/form_add_noticia")
 });
 
-app.get('/noticias/noticias', function(req,res){
-    res.render("admin/form_add_noticias")
+app.get('/noticias', function(req,res){
+    res.render('noticias/noticias');
 });
 
 
 app.listen(3000, function(){
-    console.log(msg());
+    console.log('Servidor ON');
 });
 
 //painstalra iniciar, apertar control+alt+n
