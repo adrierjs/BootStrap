@@ -1,17 +1,13 @@
-var app = require('./nodejs/config/server');
+var app = require('./config/server');
 
-app.get('/',function(req,res){
-    res.render("home/index");
-});
+var rotaNoticias = require ('./app/routes/noticias');
+rotaNoticias(app);
 
-app.get('/formulario_inclusao_noticia', function(req,res){
-    res.render("admin/form_add_noticia")
-});
+var rotaHome = require('./app/routes/home');
+rotaHome(app);
 
-app.get('/noticias', function(req,res){
-    res.render('noticias/noticias');
-});
-
+var rotaFormulario = require('./app/routes/formulario_inclusao_noticia');
+rotaFormulario(app);
 
 app.listen(3000, function(){
     console.log('Servidor ON');
