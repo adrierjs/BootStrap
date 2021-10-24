@@ -13,5 +13,5 @@ app.listen(3000, function(){
     console.log('Servidor ON');
 });
 
-//painstalra iniciar, apertar control+alt+n
+//p o server iniciar, apertar control+alt+n
 //npm install -g nodemon // utilitário para salvar automaticamente as alterações sem precisar resetar o servidor 
