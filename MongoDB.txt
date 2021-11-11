@@ -1,0 +1,144 @@
+VERSÃO 3.2 - MONGODB 
+//Manipular banco de dados
+1) Abrir o mongod.exe, indo na pasta local c. Pode-se abrir via pastar ou pelos os seguintes comandos:
+cd c:\
+cd Program Files
+cd MongoDB
+cd Server
+cd 3.2
+cd bin 
+cd mongod.exe
+
+2) Abrir o mongo.exe
+cd c:\
+cd Program Files
+cd MongoDB
+cd Server
+cd 3.2
+cd bin 
+cd mongo.exe
+
+3) Montar o banco de dados 
+show dbs; //monstrar os bancos de dados
+use curso_mongodb // preparar a estrutura para criar o banco
+db.alunos.save({Nome: "Adrier"})//para inserir o documento
+
+//Remover bd
+use curso_mongodb
+db.dropDatabase();//remover o banco de dados que eu estava conectado 
+
+4) Manipular as collections
+use mongo_db//criei o bd
+db.createCollection("alunos") //criei a coleção e adicionei a string alunos
+db.getCollectionNames() // para mostrar as coleções 
+
+//Remover collection
+db.cursos.drop() // para remover a coleção "cursos" -- preciso indicar a collection que será removida
+
+5) Inserindo documentos
+db.alunos.save(
+{ nome: sfw, 
+idade: 3523,
+...
+})
+
+6) Consultando documentos 
+use mongo_db
+db.alunos.findOne() // monstra o ultimo documento
+
+db.alunos.find() // monstra todos os documentos	
+db.alunos.find().pretty() // monstra os documentos organizados
+
+db.alunos.find({nome:{$eq:"Jose"}}) // procura nas coleções o nome jose 
+
+db.alunos.find({nome:{$eq:"Jose"}}).pretty() //procura as coleções e mostra organizado
+
+
+7) Usando operadores matemáticos 
+nome = Jose ($eq)
+idade < 30 ($lt) //idade menor que 30
+idade <= 30 ($lte) //idade maior que 30
+idade > 30 ($gt) //idade maior que 30
+idade > 30($gte) //idade maior ou igual a 30
+sexo != 'M' ($ne)// sexo diferente de M
+ex: 
+ db.alunos.find({idade:{$lte:30}}).pretty()
+
+8) Operadores lógicos
+AND
+ db.alunos.find({ sexo:{$eq:"F"}, idade:{$gt:30}}).pretty()
+
+OR
+ {
+	$or:[
+		{nome:{%seq:"maria"}},
+		{nome:{%seq:"jose"}}
+]
+}
+
+9) Update 
+update()
+save()
+
+update({parametros para atualização}),
+{$set},
+{multi:true})
+
+obs: só funciona na primeira ocorrência
+//codigo
+db.alunos.update(
+{
+	nome:"jose"
+},
+{ 
+	$set:
+	{nome: "Joao"}
+}
+)
+
+//atualizando dois registros
+
+db.alunos.update(
+{
+	sexo:"M"
+},
+{ 
+	$set:
+	{sexo: "Masculino", idade: 26}
+}
+)
+
+
+// utilizando o parâmetro mul
+
+db.alunos.update(
+{
+	sexo:"Masculino"
+},
+{ 
+	$set:
+		{sexo: "M"}
+},
+{
+	multi: true
+})
+
+10) Removendo documentos
+
+remove(criterio de exclusão) justone
+
+//execução
+db.alunos.remove(
+{
+	idade:{"maria"}
+})
+
+//removendo idade maior que 17
+db.alunos.remove(
+{
+	idade:{$gt:17}
+})
+
+
+
+
