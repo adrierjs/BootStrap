@@ -57,7 +57,7 @@ db.alunos.find({nome:{$eq:"Jose"}}).pretty() //procura as coleções e mostra or
 7) Usando operadores matemáticos 
 nome = Jose ($eq)
 idade < 30 ($lt) //idade menor que 30
-idade <= 30 ($lte) //idade maior que 30
+idade <= 30 ($lte) //idade menor ou igual a 30
 idade > 30 ($gt) //idade maior que 30
 idade > 30($gte) //idade maior ou igual a 30
 sexo != 'M' ($ne)// sexo diferente de M
