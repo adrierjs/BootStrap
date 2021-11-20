@@ -19,6 +19,20 @@ JogoDAO.prototype.gerarParametros = function(usuario){
     });
 }
 
+
+JogoDAO.prototype.iniciaJogo = function(usuario){
+
+    this._connection.open(function(err, mongoclient){
+        mongoclient.collection("jogo", function(err, collection){
+            collection.find({usuario : usuario}).toArray(function(err, result){
+                mongoclient.close();
+                
+            });
+        });
+    });
+}
+
+
 module.exports = function(){
     return JogoDAO;
 }
