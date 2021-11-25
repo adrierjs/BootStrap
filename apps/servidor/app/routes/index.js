@@ -4,20 +4,21 @@ module.exports = function(application){
 		res.format({
 			html: function(){
 				res.send('Bem vindo a sua app NodeJS!');
-
 			},
 
-
-
 			json: function(){
-				var retorno ={
+				var retorno = {
 					body: 'Bem vindo a sua app NodeJS!'
 				}
 				res.json(retorno);
-
 			}
-		})
+		});
 
-	
+		
+	});
+
+	application.post('/', function(req, res){
+		var dados = req.body;
+		res.send(dados);
 	});
 }
