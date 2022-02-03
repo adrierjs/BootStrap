@@ -1,0 +1,17 @@
+Comandos Windows:
+-cd - comando para entrar no diretório
+-dir - comando para listar diretórios
+-mkdir - criar pasta
+-del - deletar arquivo dentro da pasta
+/rmdir - deletar pasta
+-mv NOMEARQUIVO - comando para mover arquivo
+
+-cls - comando para limpar a tela
+
+Comandos Unix(Linux/Mac/Gitbash):
+-cd 
+-ls
+-mkdir
+-rm -rf
+
+

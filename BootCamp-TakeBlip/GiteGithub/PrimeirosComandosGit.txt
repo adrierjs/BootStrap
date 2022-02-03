@@ -1,0 +1,25 @@
+git init - comando para inicializar repositório
+
+ls -a - para mostrar arquivos oculos, ou seja, a pasta .git
+
+git status - mostrar o status do git
+
+
+CONFIGURAÇÃO INICIAL 
+Entra no repositório e digita so seguintes comandos:
+git config --global user.email "email@email"
+git config --global use.name "SeuNome"
+git config --list - listar as configurações feitas no repositório
+
+********Comandos*********
+git status - mostrar o status do git
+git add * ou git add . - comando para preparar commit 
+git commit -m "mensagem" - realizar commit
+
+
+******GitHub*********
+git remote add origin "link do repositório" - comando para associar o repositório local ao remoto 
+git remote -v - comando para mostrar os repositórios que estão associados
+git push origin master- comando para enviar os commits para o repositório
+git clone "link" - clonar repositório da internet
+

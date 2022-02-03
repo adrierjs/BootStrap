@@ -1,0 +1,29 @@
+body{
+    background-color: aquamarine;
+}
+
+#title, .subtitle, .post{
+    color: blue;
+
+
+}
+
+.post{
+    font-size: 16;
+    font-style: italic;
+    text-align: center;
+}
+
+.postagem{
+    background-color: rgba(207, 31, 31, 0.678);
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.253);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.contact_list{
+    list-style-type: none;
+    padding-left: 3px;
+
+}
