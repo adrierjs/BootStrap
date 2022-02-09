@@ -22,4 +22,5 @@ git remote add origin "link do repositório" - comando para associar o repositó
 git remote -v - comando para mostrar os repositórios que estão associados
 git push origin master- comando para enviar os commits para o repositório
 git clone "link" - clonar repositório da internet
+rm -rf .git  - comando para remover a pasta .git
 
